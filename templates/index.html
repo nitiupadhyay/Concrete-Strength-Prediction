@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .class1 {
+        position: absolute;
+	      top: 25%;
+	      left: 50%;
+	      margin: -150px 0 0 -150px;
+	      width:400px;
+	      height:400px;
+	      
+      }
+      .class1 h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px  }
+    </style>
+    <meta charset="UTF-8">
+    <title>strength</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="class1">
+      <h1>CONCRETE STRENGTH PREDICTION</h1>
+      <h3>ENTER THE FOLLOWING VALUES TO PREDICT</h3>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <input type="number" name="cement" step=0.01 placeholder="Cement(kg/m^3)" required="required" />
+            <input type="number" name="slag" step=0.01 placeholder="Slag(kg/m^3)" required="required" />
+            <input type="number" name="flyash" step=0.01 placeholder="Flyash(kg/m^3)" required="required" />
+            <input type="number" name="water" step=0.01 placeholder="Water(kg/m^3)" required="required" />
+            <input type="number" name="superplasticiser" placeholder="Superplasticiser(kg/m^3)" step=0.01  required="required" />
+            <input type="number" name="coarseagg" step=0.01 placeholder="Coarse-Aggregate(kg/m^3)" required="required" />
+            <input type="number" name="fineagg" step=0.01 placeholder="Fine-Aggregate(kg/m^3)" required="required" />
+            <input type="number" name="age" placeholder="Age(days)"  required="required" />
+            
+            <button  type="submit" class="btn">Predict</button>
+        </form>
+    
+      
+       <br>
+       <h1><strong>{{ prediction_text }}</strong></h1>
+    
+     </div>
+    
+  </body>
+</html>
