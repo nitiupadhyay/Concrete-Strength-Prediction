@@ -1,17 +1,4 @@
-absl-py     ==           0.10.0
-appdirs      ==            1.4.4
-astroid          ==        2.4.2
-astunparse           ==    1.6.3
-backcall              ==   0.2.0
-cachetools              == 4.1.1
-certifi   ==             2020.6.20
-chardet     ==           3.0.4
-click         ==         7.1.2
-colorama     ==          0.4.4
-cycler         ==        0.10.0
-decorator       ==       4.4.2
-distlib       ==         0.3.1
-filelock    ==           3.0.12
+
 Flask         ==         1.1.2
 
 isort                  ==5.6.4
@@ -23,10 +10,7 @@ jupyter-client         ==6.1.7
 jupyter-core          == 4.6.3
 Keras               ==   2.4.3
 Keras-Preprocessing  ==  1.1.2
-kiwisolver          ==   1.2.0
-lazy-object-proxy ==     1.4.3
-Markdown        ==       3.3.2
-MarkupSafe    ==         1.1.1
+
 matplotlib         ==    3.3.2
 mccabe                == 0.6.1
 numpy                 == 1.18.5
@@ -61,9 +45,5 @@ tornado            ==    6.0.4
 
 urllib3           ==     1.25.11
 virtualenv          ==   20.0.35
-wcwidth           ==     0.2.5
-Werkzeug        ==       1.0.1
-wheel         ==         0.35.1
-wrapt               ==   1.12.1
-WTForms           ==     2.3.3
+
 xgboost            ==    1.2.1
