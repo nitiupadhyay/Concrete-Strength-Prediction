@@ -12,6 +12,12 @@
                 text-align:center;
                 letter-spacing:1.2px;
         }
+        .imagee{
+              margin-left: 0%;
+        }
+        .colord{
+          color: rgba(255,0,0,0.3);
+        }
       </style>
     <meta charset="UTF-8">
     <title>strength</title>
@@ -22,8 +28,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
-      <br><br><br><br><br><br><br><br><br>
+      <br>
       <h1>Predicted Strength Is</h1>
-      <h1> <strong>{{ prediction_text }}</strong></h1>
+      <h1> <strong class="colord"><u>{{ prediction_text }}</u></strong></h1>
+      <br>
+      <img src="static\picture5.png" height="450 px" width="650 px" class="imagee" >
   </body>
 </html>
