@@ -18,6 +18,6 @@ def predict():
     output=prediction[0]
     f=float(output)
     g=round(f,2)
-    return render_template('second.html', prediction_text='{} Mpa'.format(g))
+    return render_template('second.html', prediction_text='{} MPa'.format(g))
 if __name__ == "__main__":
     app.run(debug=True)
