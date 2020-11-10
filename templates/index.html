@@ -28,14 +28,14 @@
     
          <!-- Main Input For Receiving Query to our ML -->
         <form action="{{ url_for('predict')}}"method="post">
-            <input type="number" name="cement" step=0.01 placeholder="Cement(kg/m^3)" required="required" />
-            <input type="number" name="slag" step=0.01 placeholder="Slag(kg/m^3)" required="required" />
-            <input type="number" name="flyash" step=0.01 placeholder="Flyash(kg/m^3)" required="required" />
-            <input type="number" name="water" step=0.01 placeholder="Water(kg/m^3)" required="required" />
-            <input type="number" name="superplasticiser" placeholder="Superplasticiser(kg/m^3)" step=0.01  required="required" />
-            <input type="number" name="coarseagg" step=0.01 placeholder="Coarse-Aggregate(kg/m^3)" required="required" />
-            <input type="number" name="fineagg" step=0.01 placeholder="Fine-Aggregate(kg/m^3)" required="required" />
-            <input type="number" name="age" placeholder="Age(days)"  required="required" />
+            <input type="number" name="cement" step=0.01       placeholder="Cement(kg/m^3)   Range:(100-600)" required="required"  min="100" max="600"/>
+            <input type="number" name="slag" step=0.01         placeholder="Slag(kg/m^3)   Range:(0-360)" required="required" min="0" max="360"/>
+            <input type="number" name="flyash" step=0.01       placeholder="Flyash(kg/m^3)   Range:(0-200)" required="required" min="0" max="200" />
+            <input type="number" name="water" step=0.01        placeholder="Water(kg/m^3)   Range:(100-250)" required="required" min="100" max="250"/>
+            <input type="number" name="superplasticiser"       placeholder="Superplasticiser(kg/m^3)   Range:(0-35)" step=0.01  required="required" min="0" max="35" />
+            <input type="number" name="coarseagg" step=0.01    placeholder="Coarse-Aggregate(kg/m^3)   Range:(800-1200)" required="required" min="800" max="1200"/>
+            <input type="number" name="fineagg" step=0.01      placeholder="Fine-Aggregate(kg/m^3)     Range:(550-993)" required="required" min="550" max="993" />
+            <input type="number" name="age"                    placeholder="Age(days)   Range:(1-365)"  required="required" min="1" max="365"/>
             
             <button  type="submit" class="btn">Predict</button>
         </form>
